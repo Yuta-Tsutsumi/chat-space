@@ -31,7 +31,7 @@ email string null:false,unique:true
 
 |Column|Type|Options|
 |------|----|-------|
-groups_name string null:false,unique:true
+name string null:false,unique:true
 
 ### Association
 - has_many :messages
