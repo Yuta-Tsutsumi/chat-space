@@ -4,38 +4,3 @@
 @import "font-awesome";
 
 
-.chat-side {
-  width: 300px;
-  color: white;
-  float: left;
-}
-
-  .side-header {
-    background-color: #253141;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-      .box {
-        display: flex;
-        justify-content: space-betoeen;
-        width: 100%;
-        font-weight: bold;
-      }
-          .box__user-name {
-            margin: 0;
-            padding: 0;
-          }
-            .box__menu {
-              display: flex;
-
-            }
-              .box__menu__new-group {
-                margin-left: 0.3rem;
-              }
-  }
-
-
-
-
-
