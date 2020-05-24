@@ -5,18 +5,17 @@
       .side-ber__box__list__name
         = current_user.name
       .side-ber__box__list__logo
-        = link_to new_group_path, class: "side-ber__box__list__logo__1" do
-          <i class="fas fa-edit icon1"></i>
-        = link_to edit_user_path(current_user), class: "side-ber__box__list__logo__2" do
-          <i class="fas fa-cog icon2"></i>
+        = link_to "" do
+          = icon('fa', 'edit', class: "side-ber__box__list__logo__1")
+         
+          = link_to edit_user_path(current_user) do
+            = icon('fas', 'cog', class: 'side-ber__box__list__logo__2')
 
   .side-bar__box
-    - current_user.groups.each do |group|
-      .side-bar__box__post
-        = link_to group_messages_path(group) do
-          .side-bar__box__post__title
-            = group.name
-          .side-bar__box__post__message
-            = group.show_last_message
+    .side-bar__box__post
+      .side-bar__box__post__title
+        tecamp
+      .side-bar__box__post__message
+        まだメッセージがありません
   
  
