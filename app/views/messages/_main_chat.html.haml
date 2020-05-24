@@ -1,40 +1,25 @@
 .main-chat
   .main-chat__header
     .main-shat__header__test
-      test
+      = @group.name
       .main-shat__header__test__2
-        Membbr: masa
+        MEMBER:
+        - @group.users.each do |user|
+          %member
+            = user.name
     .main-shat__header__edit
-      Edit
+      =link_to edit_group_path(@group), class: "contents__btn" do
+        Edit
+
   .main-chat__screen
-    .main-chat__screen__box
-      .main-chat__screen__box__name
-        name
-      .main-chat__screen__box__number
-        2020/05/13(wed)21:03:56
-    .main-chat__screen__message
-      おはよう！
+    = render @messages
+    
 
-    .main-chat__screen2__box
-      .main-chat__screen2__box__name
-        name
-      .main-chat__screen2__box__number
-        2020/05/13(wed)21:03:59
-    .main-chat__screen2__message
-      おはよう！
   .main-chat__footer
-    .main-chat__footer__box
-      .main-chat__footer__box__bar
-        .main-chat__footer__box__bar__text
-          %input{type: "text", placeholder: "type a message", class: "text-box"}
-
-        .main-chat__footer__box__bar__image
-          %label{class: "input-box__image"}
-            = icon('fa', 'image', class: "main-chat__footer__box__button")
-            .file
-              %input{type: "file", class: "file2"}
-         
-
-      .submit-btn
-        Send
-        -# %input{type: "submit", class: ".submit-btn"}
+    = form_for [@group, @message], html: {class:"message-form"} do |f|
+      .form-mask
+        = f.text_field :content, class: 'main-chat__footer__text', placeholder: 'type a message'
+        = f.label :image, class: 'main-chat__footer__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'  
+      = f.submit 'Send', class:'main-chat__footer__submit-btn'
