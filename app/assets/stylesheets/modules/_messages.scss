@@ -55,7 +55,7 @@ a{
     background-color: #2f3e51;
     height: calc(100vh - 100px);
     padding: 20px;
-    // display: none;
+    
     
     .side-bar__box__post{
       .side-bar__box__post__title{
@@ -97,7 +97,7 @@ a{
        
         margin: 28px 60px 28px 0px;
         
-        // display: none;
+        
         .contents__btn{
           border: solid 1px #38aef0;
           padding: 9px 15px;
@@ -120,7 +120,6 @@ a{
       display: flex;
       display: block;
       .main-chat__screen__box__name{
-        // color: #333333;
         display: flex;
         
       }
@@ -186,17 +185,12 @@ a{
         }
         .main-chat__footer__image{
           color: #253141;
-          // left: 750px;
-          // text-align: right;
-          // padding-left: 700px;
           top: 10px;
           right: 10px;
           position: absolute;
           .hidden{
             display: none;
             color: #253151;
-            // position: absolute;
-            
           }
         }
       }

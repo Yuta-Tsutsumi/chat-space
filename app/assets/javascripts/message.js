@@ -57,7 +57,7 @@ $.ajax({
     var html = buildHTML(data);
     $('.main-chat__screen').append(html);
     $('.main-chat__screen').animate({ scrollTop: $('.main-chat__screen')[0].scrollHeight});
-    // $('form')[0].reset();
+    
   }) 
   .always(function(data){
     $('.main-chat__footer__submit-btn').prop('disabled', false);
